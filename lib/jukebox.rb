@@ -24,22 +24,27 @@ def list(songs)
 end
 
 def find_song_by_name(user_input, songs)
-  songs.each { |song| user_input == song }
+  songs.each { |song| return true if user_input == song }
+
+  false
 end
 
 def find_song_by_number(user_input, songs)
-  songs.each { |song| user_input == song }
+  user_input_num = user_input.to_i
+
+  songs.each_with_index { |song, idx| return true if user_input_num == (idx + 1) }
+
+  false
 end
 
 def return_song(user_input, songs)
   songs.each_with_index do |song, idx|
     if user_input == song
       return song
-    else
+    elsif user_input.to_i == (idx + 1)
       return song
     end
   end
-
 end
 
 def play(songs)

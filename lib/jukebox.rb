@@ -25,14 +25,14 @@ def list(songs)
   songs.each_with_index { |song, idx| puts "#{(idx + 1)}. #{song}" }
 end
 
-# 
+#
 def find_song_by_name(user_input, songs)
   songs.each { |song| return true if user_input == song }
 
   false
 end
 
-#
+# Return true or false if the song is in the songs array
 def find_song_by_number(user_input, songs)
   user_input_num = user_input.to_i
 
@@ -41,7 +41,7 @@ def find_song_by_number(user_input, songs)
   false
 end
 
-# Returns the song
+# Returns the song in the songs array
 def return_song(user_input, songs)
   songs.each_with_index do |song, idx|
     if user_input == song

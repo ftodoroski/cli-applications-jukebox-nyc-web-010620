@@ -32,7 +32,7 @@ def find_song_by_name(user_input, songs)
   false
 end
 
-# Returns true or false if the song is in the songs array
+# Checks user_input for a song in the songs array
 def find_song_by_number(user_input, songs)
   user_input_num = user_input.to_i
 

@@ -53,5 +53,40 @@ def play(songs)
 
   if find_song_by_name(user_input, songs) || find_song_by_number(user_input, songs)
     puts "Playing #{return_song(user_input, songs)}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+# maybe ill be needing a loop here
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run(songs)
+  # puts "Please enter a command:"
+  # user_input = gets.strip
+  iteration = true
+
+  while iteration
+    puts "Please enter a command:"
+    user_input = gets.strip
+
+    iteration = false
+
+    case user_input
+    when "help"
+      iteration = true
+      help
+    when "list"
+      iteration = true
+      list(songs)
+    when "play"
+      iteration = true
+      play(songs)
+    when "exit"
+      iteration = false
+      exit_jukebox
+    end
   end
 end

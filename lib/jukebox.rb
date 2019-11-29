@@ -57,7 +57,6 @@ def play(songs)
     puts "Invalid input, please try again"
   end
 end
-# maybe ill be needing a loop here
 
 def exit_jukebox
   puts "Goodbye"

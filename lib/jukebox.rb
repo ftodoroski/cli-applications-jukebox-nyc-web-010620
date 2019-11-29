@@ -52,6 +52,7 @@ def return_song(user_input, songs)
   end
 end
 
+# Props for a song and plays it
 def play(songs)
   puts "Please enter a song name or number:"
   user_input = gets.strip

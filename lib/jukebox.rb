@@ -11,6 +11,7 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
+# Help Method list the commands
 def help
   puts "I accept the following commands:"
   puts "- help : displays this help message"
@@ -19,16 +20,19 @@ def help
   puts "- exit : exits this program"
 end
 
+# List the songs
 def list(songs)
   songs.each_with_index { |song, idx| puts "#{(idx + 1)}. #{song}" }
 end
 
+# Finds a song by the name
 def find_song_by_name(user_input, songs)
   songs.each { |song| return true if user_input == song }
 
   false
 end
 
+# Finds a song by the number
 def find_song_by_number(user_input, songs)
   user_input_num = user_input.to_i
 

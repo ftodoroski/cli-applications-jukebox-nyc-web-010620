@@ -69,6 +69,7 @@ def exit_jukebox
   puts "Goodbye"
 end
 
+# Runs the game
 def run(songs)
   iteration = true
 

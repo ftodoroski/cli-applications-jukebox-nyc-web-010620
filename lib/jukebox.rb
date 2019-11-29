@@ -25,7 +25,7 @@ def list(songs)
   songs.each_with_index { |song, idx| puts "#{(idx + 1)}. #{song}" }
 end
 
-#
+# Return true or false if the song is in the songs array
 def find_song_by_name(user_input, songs)
   songs.each { |song| return true if user_input == song }
 

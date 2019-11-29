@@ -95,3 +95,9 @@ def run(songs)
     end
   end
 end
+
+1. Things that code be done better is when the user inputs play it should
+ have another loop that asks for another song to be played instead going to
+ main menu prompt
+ - Additionaly if the user wants to go back the user can input "exit" and be back
+   in the main propm
